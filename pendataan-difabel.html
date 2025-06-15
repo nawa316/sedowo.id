@@ -13,6 +13,16 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menu-button");
+        const navMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+          navMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -1022,7 +1032,9 @@
           <a href="/index.html" class="text-gray-600 hover:text-green-600 py-1"
             >Beranda</a
           >
-          <a href="/index.html#profil" class="text-gray-600 hover:text-green-600 py-1"
+          <a
+            href="/index.html#profil"
+            class="text-gray-600 hover:text-green-600 py-1"
             >Profil Desa</a
           >
           <a

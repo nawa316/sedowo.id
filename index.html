@@ -1,479 +1,2209 @@
-<!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Website resmi Desa Tegaldowo untuk pelayanan publik disabilitas menuju desa inklusif dan berkeadilan."
+      content="Desa Tegaldowo inklusif, pelayanan disabilitas Rembang, desa ramah difabel"
     />
-    <meta
-      name="keywords"
-      content="Desa Tegaldowo, pelayanan disabilitas, desa inklusif, Rembang"
-    />
-    <title>Desa Tegaldowo - Inklusif dan Berkeadilan</title>
-    <!-- Bootstrap CSS -->
+    <title>Desa Tegaldowo - Menuju Desa Inklusif dan Berkeadilan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome untuk ikon -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Chart.js untuk infografis -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
       body {
-        font-family: "Roboto", sans-serif;
-        color: #333;
+        font-family: "Poppins", sans-serif;
         background-color: #f8f9fa;
       }
-      .navbar {
-        background-color: #1e88e5; /* Biru untuk inklusivitas */
+      .hero-pattern {
+        background-color: #4caf50;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
-      .navbar-brand img {
-        height: 40px;
+      .nav-active {
+        color: #4caf50;
+        font-weight: 600;
+        border-bottom: 2px solid #4caf50;
       }
-      .nav-link {
-        color: white !important;
+      .carousel {
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+      }
+      .carousel-item {
+        scroll-snap-align: start;
+      }
+      .accessibility-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+      }
+      .data-card {
+        transition: all 0.3s ease;
+      }
+      .data-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .table-zebra tr:nth-child(even) {
+        background-color: rgba(76, 175, 80, 0.05);
+      }
+    </style>
+    <style>
+      *,
+      ::before,
+      ::after {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      }
+      ::backdrop {
+        --tw-border-spacing-x: 0;
+        --tw-border-spacing-y: 0;
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-gradient-from-position: ;
+        --tw-gradient-via-position: ;
+        --tw-gradient-to-position: ;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / 0.5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+        --tw-contain-size: ;
+        --tw-contain-layout: ;
+        --tw-contain-paint: ;
+        --tw-contain-style: ;
+      } /* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e5e7eb;
+      }
+      ::after,
+      ::before {
+        --tw-content: "";
+      }
+      :host,
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      b,
+      strong {
+        font-weight: bolder;
+      }
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        font-size: 1em;
+      }
+      small {
+        font-size: 80%;
+      }
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+      sub {
+        bottom: -0.25em;
+      }
+      sup {
+        top: -0.5em;
+      }
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        font-size: 100%;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      input:where([type="button"]),
+      input:where([type="reset"]),
+      input:where([type="submit"]) {
+        -webkit-appearance: button;
+        background-color: transparent;
+        background-image: none;
+      }
+      :-moz-focusring {
+        outline: auto;
+      }
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+      progress {
+        vertical-align: baseline;
+      }
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+      [type="search"] {
+        -webkit-appearance: textfield;
+        outline-offset: -2px;
+      }
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      ::-webkit-file-upload-button {
+        -webkit-appearance: button;
+        font: inherit;
+      }
+      summary {
+        display: list-item;
+      }
+      blockquote,
+      dd,
+      dl,
+      figure,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      p,
+      pre {
+        margin: 0;
+      }
+      fieldset {
+        margin: 0;
+        padding: 0;
+      }
+      legend {
+        padding: 0;
+      }
+      menu,
+      ol,
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      dialog {
+        padding: 0;
+      }
+      textarea {
+        resize: vertical;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        opacity: 1;
+        color: #9ca3af;
+      }
+      [role="button"],
+      button {
+        cursor: pointer;
+      }
+      :disabled {
+        cursor: default;
+      }
+      audio,
+      canvas,
+      embed,
+      iframe,
+      img,
+      object,
+      svg,
+      video {
+        display: block;
+        vertical-align: middle;
+      }
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+      [hidden]:where(:not([hidden="until-found"])) {
+        display: none;
+      }
+      .container {
+        width: 100%;
+      }
+      @media (min-width: 640px) {
+        .container {
+          max-width: 640px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 768px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1024px;
+        }
+      }
+      @media (min-width: 1280px) {
+        .container {
+          max-width: 1280px;
+        }
+      }
+      @media (min-width: 1536px) {
+        .container {
+          max-width: 1536px;
+        }
+      }
+      .absolute {
+        position: absolute;
+      }
+      .relative {
+        position: relative;
+      }
+      .sticky {
+        position: sticky;
+      }
+      .inset-0 {
+        inset: 0px;
+      }
+      .bottom-5 {
+        bottom: 1.25rem;
+      }
+      .left-0 {
+        left: 0px;
+      }
+      .right-0 {
+        right: 0px;
+      }
+      .top-0 {
+        top: 0px;
+      }
+      .z-50 {
+        z-index: 50;
+      }
+      .col-span-1 {
+        grid-column: span 1 / span 1;
+      }
+      .col-span-2 {
+        grid-column: span 2 / span 2;
+      }
+      .-mx-2 {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+      }
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .mb-2 {
+        margin-bottom: 0.5rem;
+      }
+      .mb-4 {
+        margin-bottom: 1rem;
+      }
+      .mb-6 {
+        margin-bottom: 1.5rem;
+      }
+      .mb-8 {
+        margin-bottom: 2rem;
+      }
+      .ml-2 {
+        margin-left: 0.5rem;
+      }
+      .ml-4 {
+        margin-left: 1rem;
+      }
+      .mr-2 {
+        margin-right: 0.5rem;
+      }
+      .mt-1 {
+        margin-top: 0.25rem;
+      }
+      .mt-12 {
+        margin-top: 3rem;
+      }
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      .mt-6 {
+        margin-top: 1.5rem;
+      }
+      .mt-8 {
+        margin-top: 2rem;
+      }
+      .block {
+        display: block;
+      }
+      .flex {
+        display: flex;
+      }
+      .inline-flex {
+        display: inline-flex;
+      }
+      .grid {
+        display: grid;
+      }
+      .hidden {
+        display: none;
+      }
+      .h-10 {
+        height: 2.5rem;
+      }
+      .h-12 {
+        height: 3rem;
+      }
+      .h-16 {
+        height: 4rem;
+      }
+      .h-20 {
+        height: 5rem;
+      }
+      .h-24 {
+        height: 6rem;
+      }
+      .h-3 {
+        height: 0.75rem;
+      }
+      .h-40 {
+        height: 10rem;
+      }
+      .h-48 {
+        height: 12rem;
+      }
+      .h-5 {
+        height: 1.25rem;
+      }
+      .h-6 {
+        height: 1.5rem;
+      }
+      .h-64 {
+        height: 16rem;
+      }
+      .h-8 {
+        height: 2rem;
+      }
+      .h-80 {
+        height: 20rem;
+      }
+      .h-\[500px\] {
+        height: 500px;
+      }
+      .h-full {
+        height: 100%;
+      }
+      .w-10 {
+        width: 2.5rem;
+      }
+      .w-12 {
+        width: 3rem;
+      }
+      .w-16 {
+        width: 4rem;
+      }
+      .w-20 {
+        width: 5rem;
+      }
+      .w-3 {
+        width: 0.75rem;
+      }
+      .w-40 {
+        width: 10rem;
+      }
+      .w-5 {
+        width: 1.25rem;
+      }
+      .w-6 {
+        width: 1.5rem;
+      }
+      .w-8 {
+        width: 2rem;
+      }
+      .w-full {
+        width: 100%;
+      }
+      .max-w-2xl {
+        max-width: 42rem;
+      }
+      .flex-shrink-0 {
+        flex-shrink: 0;
+      }
+      .list-inside {
+        list-style-position: inside;
+      }
+      .list-decimal {
+        list-style-type: decimal;
+      }
+      .list-disc {
+        list-style-type: disc;
+      }
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .flex-col {
+        flex-direction: column;
+      }
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .gap-4 {
+        gap: 1rem;
+      }
+      .gap-6 {
+        gap: 1.5rem;
+      }
+      .gap-8 {
+        gap: 2rem;
+      }
+      .space-x-3 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+        margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+      }
+      .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+        margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+      }
+      .space-y-2 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+      }
+      .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+      }
+      .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .overflow-x-auto {
+        overflow-x: auto;
+      }
+      .rounded-full {
+        border-radius: 9999px;
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .border {
+        border-width: 1px;
+      }
+      .border-gray-200 {
+        --tw-border-opacity: 1;
+        border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+      }
+      .border-gray-300 {
+        --tw-border-opacity: 1;
+        border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+      }
+      .bg-black {
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+      }
+      .bg-gray-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+      }
+      .bg-gray-300 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+      }
+      .bg-gray-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+      }
+      .bg-green-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(220 252 231 / var(--tw-bg-opacity, 1));
+      }
+      .bg-green-200 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(187 247 208 / var(--tw-bg-opacity, 1));
+      }
+      .bg-green-50 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(240 253 244 / var(--tw-bg-opacity, 1));
+      }
+      .bg-green-600 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+      }
+      .bg-green-700 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
+      }
+      .bg-green-800 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(22 101 52 / var(--tw-bg-opacity, 1));
+      }
+      .bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+      }
+      .p-4 {
+        padding: 1rem;
+      }
+      .p-6 {
+        padding: 1.5rem;
+      }
+      .px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+      .py-1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .py-3 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+      }
+      .py-4 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+      .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+      .text-xs {
+        font-size: 0.75rem;
+        line-height: 1rem;
+      }
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-medium {
         font-weight: 500;
       }
-      .carousel-item img {
-        height: 500px;
-        object-fit: cover;
+      .font-semibold {
+        font-weight: 600;
       }
-      .section {
-        padding: 60px 0;
+      .uppercase {
+        text-transform: uppercase;
       }
-      .infographic {
-        max-width: 600px;
-        margin: 0 auto;
+      .text-gray-500 {
+        --tw-text-opacity: 1;
+        color: rgb(107 114 128 / var(--tw-text-opacity, 1));
       }
-      .cta-button {
-        background-color: #4caf50; /* Hijau untuk alam Tegaldowo */
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.1rem;
+      .text-gray-600 {
+        --tw-text-opacity: 1;
+        color: rgb(75 85 99 / var(--tw-text-opacity, 1));
       }
-      .cta-button:hover {
-        background-color: #388e3c;
+      .text-gray-700 {
+        --tw-text-opacity: 1;
+        color: rgb(55 65 81 / var(--tw-text-opacity, 1));
       }
-      .news-card img {
-        height: 200px;
-        object-fit: cover;
+      .text-gray-800 {
+        --tw-text-opacity: 1;
+        color: rgb(31 41 55 / var(--tw-text-opacity, 1));
       }
-      .contact-form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      .text-green-600 {
+        --tw-text-opacity: 1;
+        color: rgb(22 163 74 / var(--tw-text-opacity, 1));
       }
-      footer {
-        background-color: #757575; /* Abu-abu netral */
-        color: white;
-        padding: 20px 0;
+      .text-white {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity, 1));
       }
-      /* Aksesibilitas */
-      .accessibility-toolbar {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
+      .opacity-20 {
+        opacity: 0.2;
       }
-      .accessibility-toolbar button {
-        margin: 5px;
-        padding: 8px;
-        background-color: #1e88e5;
-        color: white;
-        border: none;
-        border-radius: 5px;
+      .opacity-50 {
+        opacity: 0.5;
       }
-      .high-contrast {
-        background-color: #000 !important;
-        color: #fff !important;
+      .shadow-inner {
+        --tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+        --tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
       }
-      .high-contrast .navbar,
-      .high-contrast footer {
-        background-color: #333 !important;
+      .shadow-lg {
+        --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+          0 4px 6px -4px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
       }
-      .large-text {
-        font-size: 1.2rem !important;
+      .shadow-md {
+        --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+          0 2px 4px -2px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+          var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+      .transition {
+        transition-property: color, background-color, border-color, fill, stroke,
+          opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+          -webkit-backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter;
+        transition-property: color, background-color, border-color,
+          text-decoration-color, fill, stroke, opacity, box-shadow, transform,
+          filter, backdrop-filter, -webkit-text-decoration-color,
+          -webkit-backdrop-filter;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .transition-transform {
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+      }
+      .duration-300 {
+        transition-duration: 300ms;
+      }
+      .hover\:scale-105:hover {
+        --tw-scale-x: 1.05;
+        --tw-scale-y: 1.05;
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:transform:hover {
+        transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+          rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+          skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+          scaleY(var(--tw-scale-y));
+      }
+      .hover\:bg-green-700:hover {
+        --tw-bg-opacity: 1;
+        background-color: rgb(21 128 61 / var(--tw-bg-opacity, 1));
+      }
+      .hover\:text-green-600:hover {
+        --tw-text-opacity: 1;
+        color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+      }
+      .hover\:text-green-800:hover {
+        --tw-text-opacity: 1;
+        color: rgb(22 101 52 / var(--tw-text-opacity, 1));
+      }
+      .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
+      .focus\:ring-2:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      .focus\:ring-green-500:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(34 197 94 / var(--tw-ring-opacity, 1));
+      }
+      @media (min-width: 768px) {
+        .md\:flex {
+          display: flex;
+        }
+        .md\:hidden {
+          display: none;
+        }
+        .md\:w-1\/2 {
+          width: 50%;
+        }
+        .md\:w-1\/3 {
+          width: 33.333333%;
+        }
+        .md\:grid-cols-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .md\:grid-cols-3 {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .md\:flex-row {
+          flex-direction: row;
+        }
+        .md\:p-8 {
+          padding: 2rem;
+        }
+        .md\:text-2xl {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+        .md\:text-5xl {
+          font-size: 3rem;
+          line-height: 1;
+        }
       }
     </style>
   </head>
-  <body>
-    <!-- Accessibility Toolbar -->
-    <div class="accessibility-toolbar">
-      <button onclick="toggleContrast()">Kontras Tinggi</button>
-      <button onclick="toggleTextSize()">Teks Besar</button>
-    </div>
+  <body data-new-gr-c-s-check-loaded="14.1239.0" data-gr-ext-installed="">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <div class="mr-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-gray-800">Sedowo.id</h1>
+            <p class="text-xs text-gray-600">Inklusif dan Berkeadilan</p>
+          </div>
+        </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="https://via.placeholder.com/40" alt="Logo Desa Tegaldowo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <nav class="hidden md:flex space-x-6">
+          <a href="/index.html" class="nav-active py-2 text-sm">Beranda</a>
+          <a
+            href="#profil"
+            class="text-gray-600 hover:text-green-600 py-2 text-sm"
+            >Profil Desa</a
+          >
+          <a
+            href="#data-disabilitas"
+            class="text-gray-600 hover:text-green-600 py-2 text-sm"
+            >Data Disabilitas</a
+          >
+          <a
+            href="/pendataan-difabel.html"
+            class="text-gray-600 hover:text-green-600 py-2 text-sm"
+            >Pendataan Difabel</a
+          >
+          <a
+            href="/eform-pelayanan.html"
+            class="text-gray-600 hover:text-green-600 py-2 text-sm"
+            >E-Form Pelayanan</a
+          >
+          <a
+            href="/pendampingan.html"
+            class="text-gray-600 hover:text-green-600 py-2 text-sm"
+            >Pendampingan</a
+          >
+        </nav>
+
+        <button class="md:hidden focus:outline-none" id="menu-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Beranda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#profil">Profil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#layanan">Layanan Disabilitas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#aspirasi">Forum Aspirasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#berita">Berita</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#galeri">Galeri</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#kontak">Kontak</a>
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
 
-    <!-- Slider -->
-    <section id="home" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://via.placeholder.com/1200x500?text=Kegiatan+Inklusif+Desa+Tegaldowo"
-            class="d-block w-100"
-            alt="Kegiatan inklusif di Desa Tegaldowo"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Desa Tegaldowo: Inklusif dan Berkeadilan</h1>
-            <p>
-              Komitmen kami untuk pelayanan publik bagi penyandang disabilitas.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://via.placeholder.com/1200x500?text=Pendampingan+Difabel"
-            class="d-block w-100"
-            alt="Pendampingan penyandang disabilitas"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Layanan Rumah Disabilitas</h1>
-            <p>Mendukung kebutuhan khusus masyarakat Desa Tegaldowo.</p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#home"
-        data-bs-slide="prev"
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full py-2 shadow-inner"
+        id="mobile-menu"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#home"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </section>
-
-    <!-- Infografis Disabilitas -->
-    <section id="profil" class="section">
-      <div class="container">
-        <h2 class="text-center mb-4">Profil Desa Tegaldowo</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Tentang Desa</h3>
-            <p>
-              Desa Tegaldowo, terletak di Kecamatan Gunem, Kabupaten Rembang,
-              adalah desa yang berkomitmen menjadi inklusif dan berkeadilan.
-              Dengan mayoritas penduduk sebagai petani, desa ini memiliki
-              potensi alam seperti padi dan jagung serta budaya seperti Kirab
-              Budaya.
-            </p>
-            <a href="#" class="btn cta-button">Baca Selengkapnya</a>
-          </div>
-          <div class="col-md-6">
-            <h3>Data Disabilitas</h3>
-            <canvas id="disabilityChart" class="infographic"></canvas>
-            <p class="text-center mt-2">
-              Infografis: Distribusi jenis disabilitas di Desa Tegaldowo (2025).
-            </p>
-          </div>
+        <div class="container mx-auto px-4 flex flex-col space-y-3">
+          <a href="/index.html" class="text-green-600 font-medium py-1">Beranda</a>
+          <a href="#profil" class="text-gray-600 hover:text-green-600 py-1"
+            >Profil Desa</a
+          >
+          <a
+            href="#data-disabilitas"
+            class="text-gray-600 hover:text-green-600 py-1"
+            >Data Disabilitas</a
+          >
+          <a href="/pendataan-difabel.html" class="text-gray-600 hover:text-green-600 py-1"
+            >Pendataan Difabel</a
+          >
+          <a href="/eform-pelayanan.html" class="text-gray-600 hover:text-green-600 py-1"
+            >E-Form Pelayanan</a
+          >
+          <a
+            href="/pendampingan.html"
+            class="text-gray-600 hover:text-green-600 py-1"
+            >Pendampingan</a
+          >
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Tombol Akses Cepat -->
-    <section id="layanan" class="section bg-light">
-      <div class="container text-center">
-        <h2>Layanan Rumah Disabilitas</h2>
-        <div class="row mt-4">
-          <div class="col-md-4">
-            <a href="/pendataan-difabel.html" class="btn cta-button w-100 mb-3"
-              >Pendataan Difabel</a
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section with Carousel -->
+      <section id="beranda" class="relative">
+        <div
+          class="carousel flex overflow-x-auto w-full h-[500px] scrollbar-hide"
+        >
+          <!-- Carousel Item 1 -->
+          <div class="carousel-item flex-shrink-0 w-full h-full relative">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div
+              class="hero-pattern w-full h-full flex items-center justify-center"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-40 w-40 text-white opacity-20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+            >
+              <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Desa Tegaldowo
+              </h2>
+              <p class="text-xl md:text-2xl text-white mb-8">
+                Inklusif dan Berkeadilan
+              </p>
+              <p class="text-lg text-white max-w-2xl">
+                Membangun masyarakat yang ramah disabilitas dan memberikan
+                pelayanan publik yang setara bagi semua warga
+              </p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <a href="/eform-pelayanan.html" class="btn cta-button w-100 mb-3"
-              >E-Form Pelayanan</a
+
+          <!-- Carousel Item 2 -->
+          <div class="carousel-item flex-shrink-0 w-full h-full relative">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div
+              class="bg-green-700 w-full h-full flex items-center justify-center"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-40 w-40 text-white opacity-20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+            >
+              <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Pelayanan Publik
+              </h2>
+              <p class="text-xl md:text-2xl text-white mb-8">
+                Mudah dan Terjangkau
+              </p>
+              <p class="text-lg text-white max-w-2xl">
+                Menyediakan akses pelayanan yang ramah bagi penyandang
+                disabilitas di Desa Tegaldowo
+              </p>
+            </div>
           </div>
-          <div class="col-md-4">
-            <a href="/pendampingan.html" class="btn cta-button w-100 mb-3"
-              >Pendampingan</a
+
+          <!-- Carousel Item 3 -->
+          <div class="carousel-item flex-shrink-0 w-full h-full relative">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+            <div
+              class="bg-green-800 w-full h-full flex items-center justify-center"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-40 w-40 text-white opacity-20"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+            >
+              <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+                Pendampingan
+              </h2>
+              <p class="text-xl md:text-2xl text-white mb-8">
+                Dukungan untuk Semua
+              </p>
+              <p class="text-lg text-white max-w-2xl">
+                Program pendampingan khusus untuk penyandang disabilitas di Desa
+                Tegaldowo
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Forum Aspirasi -->
-    <section id="aspirasi" class="section">
-      <div class="container">
-        <h2 class="text-center mb-4">Forum Aspirasi dan Pengaduan</h2>
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <form class="contact-form">
-              <div class="mb-3">
-                <label for="name" class="form-label">Nama</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  required
-                  aria-describedby="nameHelp"
-                />
-                <div id="nameHelp" class="form-text">
-                  Masukkan nama lengkap Anda.
+        <!-- Carousel Navigation -->
+        <div
+          class="absolute bottom-5 left-0 right-0 flex justify-center space-x-3"
+        >
+          <button
+            class="w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none carousel-dot active"
+            data-index="0"
+            fdprocessedid="ie313"
+          ></button>
+          <button
+            class="w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none carousel-dot"
+            data-index="1"
+            fdprocessedid="cymm2j"
+          ></button>
+          <button
+            class="w-3 h-3 rounded-full bg-white opacity-50 focus:outline-none carousel-dot"
+            data-index="2"
+            fdprocessedid="hry45"
+          ></button>
+        </div>
+      </section>
+
+      <!-- Infografis & Akses Cepat -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row gap-8">
+            <!-- Infografis Disabilitas -->
+            <div class="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                Data Disabilitas Desa Tegaldowo
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Distribusi jenis disabilitas di Desa Tegaldowo berdasarkan
+                pendataan terbaru
+              </p>
+              <img src="/data.jpg" alt="data disabilitas" class="object-cover" />
+            </div>
+
+            <!-- Tombol Akses Cepat -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center">
+              <h3 class="text-2xl font-semibold text-gray-800 mb-6">
+                Akses Cepat Layanan
+              </h3>
+              <div class="grid grid-cols-1 gap-4">
+                <a
+                  href="#data-disabilitas"
+                  class="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-lg flex items-center justify-between transition duration-300"
+                >
+                  <span class="text-lg font-medium">Data Disabilitas</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#pendataan"
+                  class="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-lg flex items-center justify-between transition duration-300"
+                >
+                  <span class="text-lg font-medium">Pendataan Difabel</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#pelayanan"
+                  class="bg-green-600 hover:bg-green-700 text-white py-4 px-6 rounded-lg flex items-center justify-between transition duration-300"
+                >
+                  <span class="text-lg font-medium">E-Form Pelayanan</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Disabilitas Section -->
+      <section id="data-disabilitas" class="py-12 bg-green-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Data Disabilitas Desa Tegaldowo
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Informasi lengkap tentang penyandang disabilitas di Desa Tegaldowo
+            berdasarkan jenis disabilitas
+          </p>
+
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Ringkasan Data
+              </h3>
+              <div class="flex flex-wrap -mx-2">
+                <div class="w-full md:w-1/3 px-2 mb-4">
+                  <div class="bg-green-50 rounded-lg p-4 text-center data-card">
+                    <div class="text-4xl font-bold text-green-600 mb-2">16</div>
+                    <div class="text-gray-700 font-medium">
+                      Total Penyandang Disabilitas
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 px-2 mb-4">
+                  <div class="bg-green-50 rounded-lg p-4 text-center data-card">
+                    <div class="text-4xl font-bold text-green-600 mb-2">9</div>
+                    <div class="text-gray-700 font-medium">
+                      Jenis Disabilitas
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/3 px-2 mb-4">
+                  <div class="bg-green-50 rounded-lg p-4 text-center data-card">
+                    <div class="text-4xl font-bold text-green-600 mb-2">13</div>
+                    <div class="text-gray-700 font-medium">
+                      Jumlah Tertinggi (Tuna Grahita &amp; Tuna Laras)
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="mb-3">
-                <label for="category" class="form-label">Kategori</label>
-                <select class="form-select" id="category" required>
-                  <option value="" disabled selected>Pilih kategori</option>
-                  <option value="pelayanan">Pelayanan</option>
-                  <option value="aksesibilitas">Aksesibilitas</option>
-                  <option value="lainnya">Lainnya</option>
-                </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+            <!-- Tabel Data -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Tabel Data Disabilitas
+              </h3>
+              <div class="overflow-x-auto">
+                <table class="w-full table-zebra">
+                  <thead>
+                    <tr class="bg-green-100">
+                      <th
+                        class="px-4 py-3 text-left text-sm font-semibold text-gray-700"
+                      >
+                        Jenis Disabilitas
+                      </th>
+                      <th
+                        class="px-4 py-3 text-center text-sm font-semibold text-gray-700"
+                      >
+                        Jumlah
+                      </th>
+                      <th
+                        class="px-4 py-3 text-center text-sm font-semibold text-gray-700"
+                      >
+                        Persentase
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Netra (Blind)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        6
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        8.8%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Rungu (Deaf)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        7
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        10.3%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Wicara (Mute)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        8
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        11.8%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Rungu-Wicara (Deaf-Mute)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        6
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        8.8%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Daksa (Physically Disable)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        10
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        14.7%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Grahita (Mental Disorder)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        13
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        19.1%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Laras (Post-Madness)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        13
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        19.1%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Eks Sakit Kusta (Post-Leprosy)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        2
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        2.9%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm text-gray-700">
+                        Tuna Ganda (Physical-Mental Disabilities)
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        3
+                      </td>
+                      <td class="px-4 py-3 text-center text-sm text-gray-700">
+                        4.4%
+                      </td>
+                    </tr>
+                    <tr class="bg-green-100">
+                      <td class="px-4 py-3 font-medium text-gray-700">Total</td>
+                      <td
+                        class="px-4 py-3 text-center font-medium text-gray-700"
+                      >
+                        68
+                      </td>
+                      <td
+                        class="px-4 py-3 text-center font-medium text-gray-700"
+                      >
+                        100%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Pesan</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  required
-                  aria-describedby="messageHelp"
-                ></textarea>
-                <div id="messageHelp" class="form-text">
-                  Jelaskan aspirasi atau pengaduan Anda.
+            </div>
+          </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 col-span-2">
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Informasi Layanan Berdasarkan Jenis Disabilitas
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-green-600 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      ></path>
+                    </svg>
+                    Tuna Netra &amp; Tuna Rungu-Wicara
+                  </h4>
+                  <ul class="list-disc list-inside text-gray-600 text-sm">
+                    <li>Pendampingan khusus saat pelayanan</li>
+                    <li>Dokumen dalam format braille</li>
+                    <li>Penerjemah bahasa isyarat</li>
+                  </ul>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-green-600 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                      ></path>
+                    </svg>
+                    Tuna Daksa
+                  </h4>
+                  <ul class="list-disc list-inside text-gray-600 text-sm">
+                    <li>Akses kursi roda di kantor desa</li>
+                    <li>Layanan antar dokumen ke rumah</li>
+                    <li>Prioritas pelayanan tanpa antre</li>
+                  </ul>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-green-600 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                      ></path>
+                    </svg>
+                    Tuna Grahita &amp; Tuna Laras
+                  </h4>
+                  <ul class="list-disc list-inside text-gray-600 text-sm">
+                    <li>Pendampingan wajib oleh keluarga/wali</li>
+                    <li>Ruang pelayanan khusus yang tenang</li>
+                    <li>Formulir dengan bahasa sederhana</li>
+                  </ul>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                  <h4 class="font-medium text-gray-800 mb-2 flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-green-600 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                      ></path>
+                    </svg>
+                    Program Khusus
+                  </h4>
+                  <ul class="list-disc list-inside text-gray-600 text-sm">
+                    <li>Pelatihan keterampilan sesuai jenis disabilitas</li>
+                    <li>Pemeriksaan kesehatan rutin</li>
+                    <li>Bantuan alat bantu sesuai kebutuhan</li>
+                  </ul>
                 </div>
               </div>
-              <button type="submit" class="btn cta-button">Kirim</button>
-            </form>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Berita -->
-    <section id="berita" class="section bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Berita Terbaru</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card news-card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Berita+1"
-                class="card-img-top"
-                alt="Pelatihan disabilitas"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Pelatihan Keterampilan Difabel</h5>
-                <p class="card-text">
-                  Desa Tegaldowo mengadakan pelatihan keterampilan untuk
-                  penyandang disabilitas pada 10 Juni 2025.
-                </p>
-                <a href="#" class="btn cta-button">Baca Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card news-card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Berita+2"
-                class="card-img-top"
-                alt="Fasilitas ramah difabel"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Pembangunan Fasilitas Ramah Difabel</h5>
-                <p class="card-text">
-                  Pemerintah desa meresmikan jalur kursi roda di balai desa pada
-                  5 Juni 2025.
-                </p>
-                <a href="#" class="btn cta-button">Baca Selengkapnya</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card news-card">
-              <img
-                src="https://via.placeholder.com/300x200?text=Berita+3"
-                class="card-img-top"
-                alt="Hari disabilitas"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Peringatan Hari Disabilitas</h5>
-                <p class="card-text">
-                  Desa Tegaldowo merayakan Hari Disabilitas Internasional dengan
-                  lokakarya inklusivitas.
-                </p>
-                <a href="#" class="btn cta-button">Baca Selengkapnya</a>
-              </div>
-            </div>
+          <!-- Unduh Data -->
+          <div class="mt-8 text-center">
+            <button
+              class="bg-green-600 hover:bg-green-700 text-white py-3 px-8 rounded-lg inline-flex items-center transition duration-300"
+              fdprocessedid="qd8d7a"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+                ></path>
+              </svg>
+              Unduh Data Lengkap
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Kontak -->
-    <section id="kontak" class="section">
-      <div class="container">
-        <h2 class="text-center mb-4">Kontak Kami</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Informasi Kontak</h3>
-            <p><i class="fas fa-phone"></i> +62 123 456 7890</p>
-            <p><i class="fas fa-envelope"></i> info@tegaldowo.id</p>
-            <p>
-              <i class="fas fa-map-marker-alt"></i> Desa Tegaldowo, Kec. Gunem,
-              Kab. Rembang
-            </p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.4567!2d111.123456!3d-6.789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDcnMjAuNCJTIDExMcKwMDcnMjQuNCJF!5e0!3m2!1sid!2sid!4v1631234567890"
-              width="100%"
-              height="300"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              aria-label="Peta lokasi Desa Tegaldowo"
-            ></iframe>
-          </div>
-          <div class="col-md-6">
-            <form class="contact-form">
-              <div class="mb-3">
-                <label for="contactName" class="form-label">Nama</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="contactName"
-                  required
-                />
+      <!-- Berita Terbaru -->
+      <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">Berita Terbaru</h2>
+          <p class="text-gray-600 mb-8">
+            Informasi terkini tentang kegiatan dan program disabilitas di Desa
+            Tegaldowo
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Berita 1 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105"
+            >
+              <div class="h-48 bg-green-200 flex items-center justify-center">
+                <img src="/pelatihan.jpg" alt="pelatihan" class="object-cover" />
               </div>
-              <div class="mb-3">
-                <label for="contactEmail" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="contactEmail"
-                  required
-                />
+              <div class="p-6">
+                <span class="text-xs font-semibold text-green-600 uppercase"
+                  >Program</span
+                >
+                <h3 class="text-xl font-semibold text-gray-800 mt-1 mb-2">
+                  Pelatihan Keterampilan untuk Difabel
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Desa Tegaldowo mengadakan pelatihan keterampilan menjahit bagi
+                  penyandang disabilitas untuk meningkatkan kemandirian ekonomi.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">12 Juni 2023</span>
+                  <a
+                    href="#"
+                    class="text-green-600 hover:text-green-800 font-medium"
+                    >Baca selengkapnya</a
+                  >
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="contactMessage" class="form-label">Pesan</label>
-                <textarea
-                  class="form-control"
-                  id="contactMessage"
-                  rows="5"
-                  required
-                ></textarea>
+            </div>
+
+            <!-- Berita 2 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105"
+            >
+              <div class="h-48 bg-green-200 flex items-center justify-center">
+                <img src="/peresmian.jpg" alt="jalur kursi roda" >
               </div>
-              <button type="submit" class="btn cta-button">Kirim</button>
-            </form>
+              <div class="p-6">
+                <span class="text-xs font-semibold text-green-600 uppercase"
+                  >Fasilitas</span
+                >
+                <h3 class="text-xl font-semibold text-gray-800 mt-1 mb-2">
+                  Peresmian Jalur Kursi Roda di Balai Desa
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Balai Desa Tegaldowo kini dilengkapi dengan jalur khusus kursi
+                  roda untuk memudahkan akses penyandang disabilitas.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">5 Mei 2023</span>
+                  <a
+                    href="#"
+                    class="text-green-600 hover:text-green-800 font-medium"
+                    >Baca selengkapnya</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Berita 3 -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105"
+            >
+              <div class="h-48 bg-green-200 flex items-center justify-center">
+                <img src="/pendampingan.jpg" alt="pendampingan" class="object-cover" />
+              </div>
+              <div class="p-6">
+                <span class="text-xs font-semibold text-green-600 uppercase"
+                  >Pendampingan</span
+                >
+                <h3 class="text-xl font-semibold text-gray-800 mt-1 mb-2">
+                  Sosialisasi Program Pendampingan Difabel
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Desa Tegaldowo meluncurkan program pendampingan khusus untuk
+                  penyandang disabilitas dengan melibatkan relawan desa.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">20 April 2023</span>
+                  <a
+                    href="#"
+                    class="text-green-600 hover:text-green-800 font-medium"
+                    >Baca selengkapnya</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Profil Desa -->
+      <section id="profil" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Profil Desa Tegaldowo
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Mengenal lebih dekat Desa Tegaldowo dan komitmen inklusivitasnya
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Tentang Desa Tegaldowo
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Desa Tegaldowo terletak di Kecamatan Gunem, Kabupaten Rembang,
+                Jawa Tengah. Dengan luas wilayah sekitar 450 hektar, desa ini
+                memiliki 5 pedukuhan: Ngelo, Ndukoh, Ngablak, Karang Anyar, dan
+                Nglencong.
+              </p>
+              <p class="text-gray-600 mb-4">
+                Mayoritas penduduk bermata pencaharian sebagai petani dan
+                peternak. Desa Tegaldowo memiliki komitmen kuat untuk menjadi
+                desa inklusif yang memberikan pelayanan setara bagi seluruh
+                warganya, termasuk penyandang disabilitas.
+              </p>
+
+              <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-4">
+                Visi Inklusivitas
+              </h3>
+              <p class="text-gray-600 mb-4">
+                "Mewujudkan Desa Tegaldowo yang inklusif, berkeadilan, dan
+                memberikan pelayanan publik yang setara bagi seluruh warga
+                termasuk penyandang disabilitas."
+              </p>
+
+              <div class="mt-6">
+                <a
+                  href="#"
+                  class="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg inline-flex items-center transition duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+                    ></path>
+                  </svg>
+                  Unduh Brosur Digital
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div class="bg-gray-100 rounded-lg p-6 h-full">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                  Peta Desa Tegaldowo
+                </h3>
+                <div class="h-64 bg-gray-300 rounded-lg mb-4 overflow-hidden">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31689.153331471975!2d111.5142535!3d-6.87332405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7715b1b5af5e45%3A0x79c9a9b5db4922ed!2sTegaldowo%2C%20Kec.%20Gunem%2C%20Kabupaten%20Rembang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1749993551374!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <div
+                    class="w-full h-full bg-gray-300 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-16 w-16 text-gray-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <h4 class="font-medium text-gray-800 mb-2">
+                  Pedukuhan di Desa Tegaldowo:
+                </h4>
+                <ul class="list-disc list-inside text-gray-600 mb-4">
+                  <li>Ngelo</li>
+                  <li>Ndukoh</li>
+                  <li>Ngablak</li>
+                  <li>Karang Anyar</li>
+                  <li>Nglencong</li>
+                </ul>
+
+                <h4 class="font-medium text-gray-800 mb-2">
+                  Fasilitas Ramah Disabilitas:
+                </h4>
+                <ul class="list-disc list-inside text-gray-600">
+                  <li>Jalur kursi roda di Balai Desa</li>
+                  <li>Toilet ramah disabilitas</li>
+                  <li>Rambu petunjuk dengan huruf braille</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontak & Peta -->
+      <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-gray-800 mb-2">
+            Kontak &amp; Lokasi
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Hubungi kami atau kunjungi kantor desa untuk informasi lebih lanjut
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Formulir Kontak
+              </h3>
+              <form id="kontakForm">
+                <div class="mb-4">
+                  <label
+                    for="namaKontak"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    id="namaKontak"
+                    name="namaKontak"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required=""
+                    fdprocessedid="wfqrqt"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    for="emailKontak"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="emailKontak"
+                    name="emailKontak"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required=""
+                    fdprocessedid="odbnoq"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    for="subjekKontak"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Subjek</label
+                  >
+                  <input
+                    type="text"
+                    id="subjekKontak"
+                    name="subjekKontak"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required=""
+                    fdprocessedid="zyeun"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    for="pesanKontak"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Pesan</label
+                  >
+                  <textarea
+                    id="pesanKontak"
+                    name="pesanKontak"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required=""
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-lg transition duration-300"
+                  fdprocessedid="ikb9g4"
+                >
+                  Kirim Pesan
+                </button>
+              </form>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">
+                Lokasi &amp; Informasi Kontak
+              </h3> 
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-green-600 mr-3 mt-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Alamat</h4>
+                    <p class="text-gray-600">
+                      Kantor Desa Tegaldowo, Kecamatan Gunem, Kabupaten Rembang,
+                      Jawa Tengah
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-green-600 mr-3 mt-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Telepon</h4>
+                    <p class="text-gray-600">(0295) 123456</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-green-600 mr-3 mt-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Email</h4>
+                    <p class="text-gray-600">info@desategaldowo.id</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-green-600 mr-3 mt-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                  <div>
+                    <h4 class="font-medium text-gray-800">Jam Pelayanan</h4>
+                    <p class="text-gray-600">
+                      Senin - Jumat: 08.00 - 15.00 WIB
+                    </p>
+                    <p class="text-gray-600">Sabtu: 08.00 - 12.00 WIB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="text-center">
-      <div class="container">
-        <p>&copy; 2025 Desa Tegaldowo Inklusif. All Rights Reserved.</p>
-        <p>
-          <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-        </p>
+    <footer class="bg-gray-800 text-white py-10">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Desa Tegaldowo</h3>
+            <p class="text-gray-300 mb-4">
+              Menuju Desa Inklusif dan Berkeadilan untuk Semua Warga
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-green-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-green-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-green-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-green-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#beranda" class="text-gray-300 hover:text-green-400"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a href="#profil" class="text-gray-300 hover:text-green-400"
+                  >Profil Desa</a
+                >
+              </li>
+              <li>
+                <a href="#pendataan" class="text-gray-300 hover:text-green-400"
+                  >Pendataan Difabel</a
+                >
+              </li>
+              <li>
+                <a href="#pelayanan" class="text-gray-300 hover:text-green-400"
+                  >E-Form Pelayanan</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pendampingan"
+                  class="text-gray-300 hover:text-green-400"
+                  >Pendampingan</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Layanan</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-300 hover:text-green-400"
+                  >Surat Keterangan</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-green-400"
+                  >Surat Pengantar</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-green-400"
+                  >Jadwal Pelayanan</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-green-400"
+                  >Pendampingan Difabel</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-green-400"
+                  >Bantuan Sosial</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-green-400 mr-2 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span class="text-gray-300"
+                  >Desa Tegaldowo, Kec. Gunem, Kab. Rembang</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-green-400 mr-2 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <span class="text-gray-300">(0295) 123456</span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-green-400 mr-2 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0l7.89-5.26a2 2 0 000-3.46L12 5.74 3 8z"
+                  ></path>
+                </svg>
+                <span class="text-gray-300">info@sedowo.id</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Chart.js Infografis -->
-    <script>
-      const ctx = document.getElementById("disabilityChart").getContext("2d");
-      new Chart(ctx, {
-        type: "pie",
-        data: {
-          labels: ["Fisik", "Sensorik", "Intelektual", "Lainnya"],
-          datasets: [
-            {
-              data: [40, 30, 20, 10],
-              backgroundColor: ["#1E88E5", "#4CAF50", "#FFC107", "#757575"],
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { position: "bottom" },
-            title: {
-              display: true,
-              text: "Distribusi Jenis Disabilitas di Desa Tegaldowo",
-            },
-          },
-        },
-      });
-
-      // Aksesibilitas
-      function toggleContrast() {
-        document.body.classList.toggle("high-contrast");
-      }
-
-      function toggleTextSize() {
-        document.body.classList.toggle("large-text");
-      }
-    </script>
+    <span id="PING_IFRAME_FORM_DETECTION" style="display: none"></span>
   </body>
+  <chatgpt-sidebar data-gpts-theme="light"></chatgpt-sidebar>
+  <grammarly-desktop-integration
+    data-grammarly-shadow-root="true"
+  ></grammarly-desktop-integration>
 </html>
